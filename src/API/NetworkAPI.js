@@ -6,7 +6,7 @@ const API = {
     const defaultHeaders = {
       Accept: 'application/json',
       'Content-Type': 'application/json',
-      'Authorization': '563492ad6f917000010000010ae1fbd897654dbd8064af7f596e6451'
+    //   'Authorization': '563492ad6f917000010000010ae1fbd897654dbd8064af7f596e6451'
     };
     return defaultHeaders;
   },
@@ -34,7 +34,8 @@ const API = {
     axios(config)
       .then((response) => {
         const { data = {}} = response;
-        callback(null, data);
+        const { hits = [] } = data;
+        callback(null, hits);
       })
       .catch((error) => {
         callback(error, null);
