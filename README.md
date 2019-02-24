@@ -8,6 +8,9 @@
     - react-native cli
     - react native
 
+# Reference Guide
+https://facebook.github.io/react-native/docs/getting-started
+
 # How to Run the app
    Go inside the folder PhotoViewer and do the below
    ```sh
