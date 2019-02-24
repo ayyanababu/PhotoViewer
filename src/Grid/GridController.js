@@ -4,9 +4,7 @@ export const getPhotos = (query, pageNumber, callback) => {
     API.get(photoSearchPath, (error, response) => {
         if ( error ){
             callback(err, null);
-            return;
         }
-
         if ( response ){
             callback(null, response);
         }
