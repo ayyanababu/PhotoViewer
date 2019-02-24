@@ -1,4 +1,7 @@
 import axios from 'axios';
+import configs from '../Configs/Configurations';
+
+const { apiTimeOut } = configs;
 
 const API = {
 
@@ -6,7 +9,6 @@ const API = {
     const defaultHeaders = {
       Accept: 'application/json',
       'Content-Type': 'application/json',
-    //   'Authorization': '563492ad6f917000010000010ae1fbd897654dbd8064af7f596e6451'
     };
     return defaultHeaders;
   },
@@ -25,7 +27,7 @@ const API = {
       url: routeUrl,
       data: params,
       headers: headers || API.getDefaultHeaders(),
-      timeout: 20000,
+      timeout: apiTimeOut,
     };
     API.call(config, callback);
   },
