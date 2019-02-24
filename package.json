@@ -9,7 +9,8 @@
   "dependencies": {
     "axios": "^0.18.0",
     "react": "16.6.3",
-    "react-native": "0.58.5"
+    "react-native": "0.58.5",
+    "urijs": "^1.19.1"
   },
   "devDependencies": {
     "babel-core": "^7.0.0-bridge.0",

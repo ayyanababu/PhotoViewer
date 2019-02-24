@@ -3,6 +3,8 @@ import { View, StyleSheet, TextInput } from 'react-native'
 import { getPhotos } from './PhotoViewerController';
 import Grid from '../Grid/GridComponent';
 import { colors } from '@branding/';
+import URI from 'urijs';
+
 export default class PhotoViewerContainer extends Component {
 
   constructor(props){
@@ -56,7 +58,7 @@ export default class PhotoViewerContainer extends Component {
   onSearch = (value) => {
     const pageNumber = 1;
     this.setState({
-      query: value,
+      query: URI.encode(value),
       pageNumber,
       photos:[],
     }, () => {
